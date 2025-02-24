@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: Insuranceapp-container
-        image: paragv14/Insuranceapp-app
+        image: paragv14/insuranceapp-app
         ports:
         - containerPort: 8081
 ---
