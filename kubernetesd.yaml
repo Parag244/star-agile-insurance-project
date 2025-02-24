@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Insurance-app-deploy
+  name: insurance-app-deploy
   labels:
-    app: Insuranceapp-app
+    app: insuranceapp-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: Insuranceapp-app
+      app: insuranceapp-app
   template:
     metadata:
       labels:
-        app: Insuranceapp-app
+        app: insuranceapp-app
     spec:
       containers:
-      - name: Insuranceapp-container
+      - name: insuranceapp-container
         image: paragv14/insuranceapp-app
         ports:
         - containerPort: 8081
@@ -23,12 +23,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Insuranceapp-np-service
+  name: insuranceapp-np-service
   labels:
-    app: Insuranceapp-app
+    app: insuranceapp-app
 spec:
   selector:
-    app: Insuranceapp-app
+    app: insuranceapp-app
 
   type: NodePort
   ports:
